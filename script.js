@@ -1,3 +1,5 @@
+const myLibrary = [];
+
 class Book {
     constructor(title, author, numPages, finished) {
             this.title = title;
@@ -6,3 +8,5 @@ class Book {
             this.finished = finished;
     };
 }
+
+

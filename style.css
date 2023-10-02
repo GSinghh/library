@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Open+Sans:wght@300&family=Source+Code+Pro&display=swap');
+
 :root
 {
-    --background-color: rgb(232, 232, 233);
+   --background-color: rgb(246, 246, 249);
    --header-color: white;
+   --border-color: rgb(222, 222, 222);
 }
 *, *::after, *::before
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
 }
 @keyframes spin 
 {
@@ -23,21 +27,24 @@
 body
 {
     background-color: var(--background-color);
+    position: relative;
+    min-height: 100vh;
 }
 .header
 {
     background-color: var(--header-color);
-    height: 75px;
+    height: 90px;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 2px solid rgb(222, 222, 222);
 }
 .header-title
 {
-    font-family: 'Courier New', Courier, monospace;
     font-size: 35px;
+    /* border: 1px solid black; */
+    padding: 8px;
 }
 .add-button
 {
@@ -45,6 +52,7 @@ body
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: var(--background-color);
     height: 35px;
     width: 35px;
     border-radius: 25px;
@@ -54,4 +62,79 @@ body
 .add-button:hover
 {
     animation: spin 1s linear forwards;
+}
+.book-container
+{
+    margin: 0 auto;
+    padding: 50px;
+}
+.grid-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    gap: 1em;
+}
+.book
+{
+    height: 350px;
+    width: 350px;
+    text-align: center;
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    margin: 10px;
+    justify-self: center;
+    background-color: var(--header-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.book > p
+{
+    font-size: 20px;
+    padding: .5rem;
+}
+.book > button
+{
+    font-size: medium;
+    width: 100%;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+#delete
+{
+    background-color: rgb(255, 147, 147);
+}
+#status
+{
+    background-color: rgb(167, 249, 167);
+}
+.footer
+{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+}
+.github-image
+{
+    background-image: url("images/github-mark.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+}
+.footer a:hover
+{
+    animation: spin .5s linear forwards;
 }
