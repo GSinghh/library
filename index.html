@@ -5,49 +5,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Readify</title>
         <link href="style.css" rel="stylesheet">
+        <script src="script.js"></script>
     </head>
     <body>
+        <div class="darken-background"></div>
+
         <header class = "header">
-            <div class="header-title">ReadifyOnline</div>
-            <button id="add-button" class = "add-button"></button>
+            <div class="header-title">Readify</div>
+            <button id="open-dialog" class = "add-button"></button>
         </header>
+
         <main class = "book-container">
             <div class="grid-container">
                 <div class="book">
                     <p class = "title">Harry Potter</p>
                     <p class = "author">J.K. Rowling</p>
                     <p class = "pages">500 Pages</p>
-                    <button id = "status" class = "book-button">Finished</button>
-                    <button id = "delete" class = "book-button">Delete</button>
-                </div>
-                <div class="book">
-                    <p class = "title">Harry Potter</p>
-                    <p class = "author">J.K. Rowling</p>
-                    <p class = "pages">500 Pages</p>
-                    <button id = "status" class = "book-button">Finished</button>
-                    <button id = "delete" class = "book-button">Delete</button>
-                </div>
-                <div class="book">
-                    <p class = "title">Harry Potter</p>
-                    <p class = "author">J.K. Rowling</p>
-                    <p class = "pages">500 Pages</p>
-                    <button id = "status" class = "book-button">Finished</button>
-                    <button id = "delete" class = "book-button">Delete</button>
-                </div>
-                <div class="book">
-                    <p class = "title">Harry Potter</p>
-                    <p class = "author">J.K. Rowling</p>
-                    <p class = "pages">500 Pages</p>
-                    <button id = "status" class = "book-button">Finished</button>
-                    <button id = "delete" class = "book-button">Delete</button>
+                    <button id = "status">Finished</button>
+                    <button id = "delete">Delete</button>
                 </div>
             </div>
         </main>
+
         <footer class = "footer">
             <div class = "footer-text" style="font-size: 25px;">Copyright © 2023 GSinghh</div>
             <a href="https://github.com/GSinghh" target="_blank">
                 <div class = "github-image"></div>
             </a>
         </footer>
+        <!-- <dialog id = "dialog-input">
+            <div class="dialog-title">Add a book</div>
+            <input type = "text" id = "name" placeholder="Title">
+            <input type = "text" id = "author" placeholder="Author">
+            <input type = "number" id = "pages" placeholder="Pages">
+            <div class="read-status">
+                Have you read it?
+                <input type = "checkbox">
+            </div>
+            <button id = "submit">Submit</button>
+        </dialog> -->
     </body>
 </html>

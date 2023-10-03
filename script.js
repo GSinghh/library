@@ -1,5 +1,3 @@
-const myLibrary = [];
-
 class Book {
     constructor(title, author, numPages, finished) {
             this.title = title;
@@ -9,4 +7,9 @@ class Book {
     };
 }
 
+const myLibrary = [];
 
+const addBook = (Book) =>
+{
+    myLibrary.push(Book);
+}

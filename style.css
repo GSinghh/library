@@ -30,6 +30,9 @@ body
     position: relative;
     min-height: 100vh;
 }
+
+/* Header */
+
 .header
 {
     background-color: var(--header-color);
@@ -63,6 +66,9 @@ body
 {
     animation: spin 1s linear forwards;
 }
+
+/* Main Content */
+
 .book-container
 {
     margin: 0 auto;
@@ -113,6 +119,57 @@ body
 {
     background-color: rgb(167, 249, 167);
 }
+
+/* Modal */
+
+dialog
+{
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 10px;
+}
+
+dialog > input
+{
+    padding: 5px;
+    border-radius: 5px;
+    border: .5px solid;
+}
+
+dialog > button 
+{
+    padding: 10px;
+    background-color: rgb(167, 249, 167);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.read-status
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.darken-background
+{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+/* Footer */
+
 .footer
 {
     display: flex;
