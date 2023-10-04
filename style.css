@@ -131,27 +131,44 @@ dialog
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
     text-align: center;
-    background-color: var(--background-color);
     border: none;
+    background-color: var(--background-color);
     border-radius: 10px;
 }
 
-dialog > input
+dialog::backdrop
+{
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+dialog > .dialog-title
+{
+    font-size: 20px;
+}
+
+dialog #form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+dialog input
 {
     padding: 5px;
     border-radius: 5px;
     border: .5px solid;
 }
 
-dialog > button 
+dialog button 
 {
     padding: 10px;
     background-color: rgb(167, 249, 167);
     border: none;
+    height: 40px;
     border-radius: 15px;
     cursor: pointer;
 }
@@ -159,15 +176,10 @@ dialog > button
 {
     display: flex;
     justify-content: space-evenly;
+    font-size: 20px;
+    margin: 10px 0;
 }
-.darken-background
-{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
-}
+
 /* Footer */
 
 .footer

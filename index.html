@@ -5,11 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Readify</title>
         <link href="style.css" rel="stylesheet">
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
     </head>
+    
     <body>
-        <div class="darken-background"></div>
-
         <header class = "header">
             <div class="header-title">Readify</div>
             <button id="open-dialog" class = "add-button"></button>
@@ -27,22 +26,25 @@
             </div>
         </main>
 
+        <dialog id = "dialog-input">
+            <div class="dialog-title">Add a book</div>
+            <form id = "form">
+                <input type = "text" id = "name" placeholder="Title">
+                <input type = "text" id = "author" placeholder="Author">
+                <input type = "number" id = "pages" placeholder="Pages">
+                <div class="read-status">
+                    Have you read it?
+                    <input type = "checkbox" id = "checkbox">
+                </div>
+                <button id = "submit">Submit</button>
+            </form>
+        </dialog>
+
         <footer class = "footer">
             <div class = "footer-text" style="font-size: 25px;">Copyright © 2023 GSinghh</div>
             <a href="https://github.com/GSinghh" target="_blank">
                 <div class = "github-image"></div>
             </a>
         </footer>
-        <!-- <dialog id = "dialog-input">
-            <div class="dialog-title">Add a book</div>
-            <input type = "text" id = "name" placeholder="Title">
-            <input type = "text" id = "author" placeholder="Author">
-            <input type = "number" id = "pages" placeholder="Pages">
-            <div class="read-status">
-                Have you read it?
-                <input type = "checkbox">
-            </div>
-            <button id = "submit">Submit</button>
-        </dialog> -->
     </body>
 </html>
