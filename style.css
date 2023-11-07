@@ -5,7 +5,7 @@
    --background-color: rgb(246, 246, 249);
    --header-color: white;
    --border-color: rgb(222, 222, 222);
-   --not-finished-button-color: rgb(255,255,0);
+   --not-finished-button-color: rgb(0, 229, 255);
    --finished-button-color: rgb(167, 249, 167);
    --delete-button-color: rgb(255, 147, 147);
 }

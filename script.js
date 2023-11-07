@@ -13,10 +13,20 @@ const form = document.getElementById('form');
 const gridContainer = document.getElementById('grid-container');
 
 let myLibrary = [];
+let index = 0;
+
+// const printAll = () => {
+//     for(let i = 0; i < myLibrary.length; i++)
+//     {
+//         console.log(myLibrary[i]);
+//     }
+// }
 
 const addBookToStorage = (Book) => {
     myLibrary.push(Book);
     addBook(Book);
+    printAll();
+    index++;
 }
 
 const addBook = (bookObject) => {
@@ -26,6 +36,7 @@ const addBook = (bookObject) => {
 
     const newDiv = document.createElement('div');
     newDiv.className = "book";
+    newDiv.setAttribute('data-index', index);
 
     const title = document.createElement('p');
     title.className = "title"
@@ -43,9 +54,30 @@ const addBook = (bookObject) => {
     statusButton.innerText = bookObject.finished ? "Finished" : "In Progress";
     const additionalClass = bookObject.finished ? "finished" : "in-progress";
     statusButton.className = "btn" + ' ' + additionalClass;
+    
+    statusButton.onclick = () => {
+        if (statusButton.classList.contains('finished'))
+        {
+            statusButton.innerText = "In Progress";
+            statusButton.classList.remove('finished');
+            statusButton.classList.add('in-progress');
+            myLibrary[parseInt(newDiv.getAttribute('data-index'))].finished = false;
+        }
+        else
+        {
+            statusButton.innerText = "Finished";
+            statusButton.classList.remove('in-progress');
+            statusButton.classList.add('finished');
+            myLibrary[parseInt(newDiv.getAttribute('data-index'))].finished = true;
+        }
+    }
 
     
     const deleteButton = document.createElement('button');
+    deleteButton.onclick = () => {
+        myLibrary.splice(parseInt(newDiv.getAttribute('data-index')), 1);
+        newDiv.remove();
+    }
     deleteButton.innerText = "Delete";
     deleteButton.className = "btn delete"
 
@@ -56,8 +88,6 @@ const addBook = (bookObject) => {
     newDiv.appendChild(deleteButton);
 
     gridContainer.appendChild(newDiv);
-
-
 }
 
 openDialogButton.addEventListener("click", () => { 
